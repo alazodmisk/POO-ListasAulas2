@@ -11,9 +11,12 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     private String nome;
     private double preco;
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
 
     public long getId() {
         return id;
