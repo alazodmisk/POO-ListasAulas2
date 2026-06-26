@@ -36,3 +36,12 @@
 (6) As regras de negócio ficam no service, o controller apenas acessam elas
 (7) Não há relacionamento de heranças entre as classes, apenas se comunicam entre si com exceção do repository que recebe extends de JPA
 (8) Cliente pode receber um atributo do tipo Status em que diz se foi aprovado seu cadastro, recusado ou se analise esta pendente (PENDENTE, RECUSADO OU APROVADO)
+
+==ATIVIDADE 4==
+(1) ClienteService
+(2) email e nome
+(5) Regra de negócio adicionada -> Email e nome do cliente não pode ser vazio
+(6) Regra no service
+
+==ATIVIDADE 5==
+(1) ClienteService, ClienteController e ClienteRepository

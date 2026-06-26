@@ -7,5 +7,5 @@ import com.example.crudproject.model.Cliente;
 
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Integer>{
-
+    public Cliente findByEmail(String email);
 }

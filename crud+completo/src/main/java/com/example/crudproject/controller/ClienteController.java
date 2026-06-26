@@ -39,4 +39,9 @@ public class ClienteController {
     public void deletarCliente(int id){
         clienteService.deleteById(id);
     }
+
+    @GetMapping("/email/{email}")
+    public Cliente findByEmail(String email){
+        return clienteService.findByEmail(email);
+    }
 }
