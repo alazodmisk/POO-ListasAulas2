@@ -11,13 +11,13 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String nome;
-    private String cpf;
-    private int idade;
+    private String email;
+    private int telefone;
 
-    public Cliente(String cpf, int id, int idade, String nome) {
-        this.cpf = cpf;
+    public Cliente(String email, int id, int telefone, String nome) {
+        this.email = email;
         this.id = id;
-        this.idade = idade;
+        this.telefone = telefone;
         this.nome = nome;
     }
 
@@ -29,12 +29,12 @@ public class Cliente {
         return nome;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getEmail() {
+        return email;
     }
 
-    public int getIdade() {
-        return idade;
+    public int getTelefone() {
+        return telefone;
     }
 
     @Override
@@ -42,8 +42,8 @@ public class Cliente {
         return "Produto{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", cpf=" + cpf +
-                ", idade=" + idade +
+                ", email=" + email +
+                ", idade=" + telefone+
                 '}';
     }
 }

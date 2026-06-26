@@ -38,7 +38,11 @@ public class ProdutoService {
 
     public Produto mudarPreco(long id, double preco){
         Produto pc = selectProdutoById(id);
-        pc.setPreco(preco);
+        if (preco <= 0){
+            System.out.println("Preço inválido");
+        } else {
+            pc.setPreco(preco);
+        }
         return productRepository.save(pc);
     }
 

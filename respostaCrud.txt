@@ -15,12 +15,21 @@
 (3) As regras de negócio são executadas pelas classes ProdutoService e OrcamentoService
 (4) As interfaces repository são as responsáveis por conversar com o banco de dados
 (5) Com requisição do tipo Post http://localhost:8090/orcamento visto que não há nada escrito entre parêntes na anotação do @PostMapping
-(6) Com requisição do tipo Get http://localhost:8090/produtos visto que não há nada escrito entre parêntese no @GetMapping
-    Entretanto, se buscamos por apenas um produto temos http://localhost:8090/produtos/{id}
+(6) Com requisição do tipo Get http://localhost:8090/produtos visto que não há nada escrito entre parêntese no @GetMapping Entretanto, se buscamos por apenas um produto temos http://localhost:8090/produtos/{id}
+
+==ATIVIDADE 2==
+(1) ProdutoService, ProdutoController, ProdutoRepository e Produto
+(2) Os atributos utilizados foram os atributos já presentes na entidade produto
+(3) As classes já estavam alocadas em seus devidos pacotes
+(4) Um novo endpoint foi criado, para a requisão PUT com o objetivo de se alterar o preço do produto depois de salvo no banco de dados
+(5) As regras de negócio padrão como deletar ou achar por id e a nova regra de negócio do tipo PUT para atualizar o preco de um produto
+(6) A regra está no Service com acesso via controller
+(7) Não
+(8) Não
 
 ==ATIVIDADE 3==
 (1) Cliente[entidade]; ClienteController[endpoints]; ClienteService[Regras De Negócio]; ClienteRepository[Permanencia no Banco de Dados]
-(2) Atributos de ID para cliente, nome, idade e cpf;
+(2) Atributos de ID para cliente, nome, email e telefone;
 (3) Cliente[@Entity]; ClienteController[@RestController e @RequestMapping]; ClienteRepository[@repository]; ClienteService[@Service]
 (4) http://localhost:8090/cliente e http://localhost:8090/cliente/{id}, variando o tipo de requisição
 (5) FindAll, FindById, DeleteById, save
