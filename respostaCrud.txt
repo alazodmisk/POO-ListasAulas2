@@ -1,0 +1,29 @@
+==QUESTÕES A SEREM RESPONDIDAS POR ETAPA==
+(1) Quais classes aparecem no problema?
+(2) Quais atributos são necessários?
+(3) Qual pacote deve receber cada classe?
+(4) Quais endpoints serão necessários?
+(5) Existe alguma regra de negócio? 
+(6) Essa regra deve ficar no controller, no service ou no model?
+(7) Existe algum relacionamento entre classes?
+(8) Existe algum estado que pode virar enum?
+
+
+==ATIVIDADE 1==
+(1) As classes Produto e Orcamento representam as entidades
+(2) As classes que recebem requisições HTTP são as classes ProdutoController e OrcamentoController
+(3) As regras de negócio são executadas pelas classes ProdutoService e OrcamentoService
+(4) As interfaces repository são as responsáveis por conversar com o banco de dados
+(5) Com requisição do tipo Post http://localhost:8090/orcamento visto que não há nada escrito entre parêntes na anotação do @PostMapping
+(6) Com requisição do tipo Get http://localhost:8090/produtos visto que não há nada escrito entre parêntese no @GetMapping
+    Entretanto, se buscamos por apenas um produto temos http://localhost:8090/produtos/{id}
+
+==ATIVIDADE 2==
+(1) Cliente[entidade]; ClienteController[endpoints]; ClienteService[Regras De Negócio]; ClienteRepository[Permanencia no Banco de Dados]
+(2) Atributos de ID para cliente, nome, idade e cpf;
+(3) Cliente[@Entity]; ClienteController[@RestController e @RequestMapping]; ClienteRepository[@repository]; ClienteService[@Service]
+(4) http://localhost:8090/cliente e http://localhost:8090/cliente/{id}, variando o tipo de requisição
+(5) FindAll, FindById, DeleteById, save
+(6) As regras de negócio ficam no service, o controller apenas acessam elas
+(7) Não há relacionamento de heranças entre as classes, apenas se comunicam entre si com exceção do repository que recebe extends de JPA
+(8) Cliente pode receber um atributo do tipo Status em que diz se foi aprovado seu cadastro, recusado ou se analise esta pendente (PENDENTE, RECUSADO OU APROVADO)
