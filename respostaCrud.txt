@@ -45,3 +45,17 @@
 
 ==ATIVIDADE 5==
 (1) ClienteService, ClienteController e ClienteRepository
+(2) Atributos trabalhados: email
+(4) localhost:8090/email/{email}
+(5) findByEmail
+(6) Regra no service porém com acesso via controller
+
+==ATIVIDADE 6, 7 e 8==
+(1) Todas de orcamento exceto repository
+(2) statusOrcamento
+(4) localhost:8090/{id}/aprovar e localhost:8090/{id}/rejeitar
+(5) O comportamento de aprovar ou rejeitar o orcamento foi movida para o model de orcamento, desse modo o service chama esses métodos de acordo com o pedido do controller
+(8) Foi utilizado o ENUM StatusOrcamento
+
+obs após realizar todas as atividades até a 13
+Ao mudar o status de um orçamento de pendente para autorizado ou rejeitado, o mesmo muda no h2-console provando que sim, o status está sendo alterado pela requisição porém ao utilizar o método get o json ainda vem como pendente.
