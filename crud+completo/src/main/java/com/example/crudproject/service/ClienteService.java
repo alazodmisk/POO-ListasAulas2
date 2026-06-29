@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.crudproject.exception.ValidacaoException;
 import com.example.crudproject.model.Cliente;
 import com.example.crudproject.repository.ClienteRepository;
 
@@ -24,7 +25,7 @@ public class ClienteService {
 
     public Cliente save(Cliente cliente){
         if (cliente.getNome() == null || cliente.getEmail() == null){
-            throw new RuntimeException("Erro, nome ou email vazio");
+            throw new ValidacaoException("Email ou Nome vazios");
         }
         return clienteRepository.save(cliente);
     }

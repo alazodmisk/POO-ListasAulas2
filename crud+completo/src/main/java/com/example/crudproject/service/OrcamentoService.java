@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.crudproject.exception.ValidacaoException;
 import com.example.crudproject.model.Cliente;
 import com.example.crudproject.model.Orcamento;
 import com.example.crudproject.model.Produto;
@@ -49,7 +50,7 @@ public class OrcamentoService {
         if(oc.isPresent()){
             return oc.get();
         }else{
-            throw new RuntimeException("Orcamento nao encotrado.");
+            throw new ValidacaoException("Orçamento não encontrado");
         }
     }
 
